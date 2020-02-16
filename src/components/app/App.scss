@@ -1,2 +1,35 @@
-.app {
+.app-container {
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #e1e2e3;
+
+  .app {
+    height: 100%;
+    background-color: #fff;
+    padding: 40px;
+
+    &-title {
+      text-align: center;
+    }
+
+    &-error {
+      margin-bottom: 16px;
+      padding: 15px;
+      font-size: 14px;
+      line-height: 1.4;
+      border-radius: 4px;
+      background-color: #fff1f0;
+      border: 1px solid #ffa39e;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app-container {
+    padding: 0;
+
+    .app {
+      padding: 40px 20px;
+    }
+  }
 }

@@ -15,7 +15,7 @@ export default () => {
     const fetchArticles = async () => {
       setLoading(true);
       const url = process.env.REACT_APP_API;
-      const params = { country: 'us' };
+      const params = { country: 'au' };
       try {
         const res = await axios.get(url, { params });
         setArticles(res.data.articles);
@@ -35,13 +35,19 @@ export default () => {
 
   const filteredArticles = filter(articles, filterText, ['title']);
 
-  console.log(loading, articles, errorMsg, filterText);
-
   return (
-    <div className="app">
-      <h1>React News Reader</h1>
-      <Input placeholder="Filter articles by headlines" onChagne={onFilterTextChange} />
-      <Articles loading={loading} articles={filteredArticles} />
+    <div className="app-container">
+      <div className="app">
+        <h1 className="app-title">React News Reader</h1>
+        {errorMsg ? (
+          <div className="app-error">{errorMsg}</div>
+        ) : (
+          <>
+            <Input placeholder="Filter articles by headlines" onChagne={onFilterTextChange} />
+            <Articles loading={loading} articles={filteredArticles} />
+          </>
+        )}
+      </div>
     </div>
   );
 };
