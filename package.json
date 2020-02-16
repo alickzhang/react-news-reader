@@ -2,6 +2,7 @@
   "name": "react-news-reader",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://alickzhang.github.io/react-news-reader/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -20,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "./node_modules/.bin/eslint src/**/*.jsx"
+    "lint": "./node_modules/.bin/eslint src/**/*.jsx",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,6 +47,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "gh-pages": "^2.2.0",
     "stylelint": "^13.2.0",
     "stylelint-config-recommended-scss": "^4.2.0",
     "stylelint-scss": "^3.14.2"
