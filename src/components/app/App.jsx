@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import Articles from '../articles/Articles';
 import './App.scss';
 
 export default () => {
@@ -29,15 +30,7 @@ export default () => {
   return (
     <div className="app">
       <h1>React News Reader</h1>
-      <ul>
-        {articles.map(item => (
-          <li key={item.title}>
-            <h2>{item.title}</h2>
-            <h3>{item.author}</h3>
-            <p>{item.content}</p>
-          </li>
-        ))}
-      </ul>
+      <Articles articles={articles} />
     </div>
   );
 };

@@ -1,0 +1,43 @@
+.articles {
+  padding: 40px;
+
+  .article-list {
+    &-item {
+      padding: 20px 0;
+      border-bottom: 1px solid #e8e8e8;
+      // box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.08);
+      // transition: all 0.2s ease-out;
+
+      // &:hover {
+      //   box-shadow: 0 1px 1px 0 rgba(60, 64, 67, 0.08), 0 1px 3px 1px rgba(60, 64, 67, 0.16);
+      // }
+
+      .title {
+        font-size: 22px;
+        line-height: 1.4;
+
+        > a {
+          color: #1890ff;
+          text-decoration: none;
+        }
+      }
+
+      .author {
+        color: #aaa;
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: 2px;
+      }
+
+      .content {
+        line-height: 1.4;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .articles {
+    padding: 20px;
+  }
+}
