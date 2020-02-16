@@ -1,0 +1,36 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "rules": {
+    "linebreak-style": 0,
+    "max-len": ["error", { "ignoreComments": true, "ignoreStrings": true, "code": 120 }],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-one-expression-per-line": ["error", { "allow": "single-child" }],
+    "react/jsx-wrap-multilines": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/prop-types": "off",
+    "react-hooks/rules-of-hooks": "error",
+    "object-curly-newline": "off",
+    "arrow-parens": "off"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y"],
+  "settings": {
+    "react": {
+      "version": "16.12.0"
+    }
+  }
+}
